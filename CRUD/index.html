@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo CRUD de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ejemplo CRUD de Productos</h1>
+    <div id="busqueda-container">
+        <label for="busqueda">Buscar por Nombre:</label>
+        <input type="text" id="busqueda" name="busqueda" oninput="cargarYMostrarProductos()">
+    </div>
+    <form id="formulario-producto">
+        <input type="hidden" id="producto-id" name="id">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required>
+        <button type="button" onclick="agregarOActualizarProducto()">Guardar Producto</button>
+    </form>
+
+    <div id="contenedor-resultados"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
